@@ -1,116 +1,116 @@
-body {
-  margin: 0;
-  background: black;
-  color: white;
-  font-family: Arial;
-  text-align: center;
+body{
+margin:0;
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
 }
 
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
 }
 
-.title {
-  margin-top: 80px;
-  animation: fade 2s;
+.title{
+margin-top:70px;
+animation:fade 2s;
 }
 
-@keyframes fade {
-  from {opacity:0; transform: scale(0.8);}
-  to {opacity:1; transform: scale(1);}
+@keyframes fade{
+from{opacity:0;transform:scale(0.7);}
+to{opacity:1;transform:scale(1);}
 }
 
-button {
-  padding: 15px 30px;
-  margin: 10px;
-  background: blue;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 16px;
+button{
+padding:15px 30px;
+margin:10px;
+border:none;
+border-radius:15px;
+background:blue;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
 
-.boost {
-  background: linear-gradient(45deg, blue, cyan);
-  box-shadow: 0 0 20px cyan;
-  animation: glow 1s infinite alternate;
+.boost{
+background:linear-gradient(45deg,blue,cyan);
+box-shadow:0 0 20px cyan;
+animation:glow 1s infinite alternate;
 }
 
-@keyframes glow {
-  from {box-shadow:0 0 10px cyan;}
-  to {box-shadow:0 0 25px blue;}
+@keyframes glow{
+from{box-shadow:0 0 10px cyan;}
+to{box-shadow:0 0 25px blue;}
 }
 
-.progress {
-  width: 70%;
-  height: 20px;
-  background: #222;
-  margin: auto;
-  border-radius: 10px;
+.progress{
+width:70%;
+height:20px;
+background:#222;
+margin:auto;
+border-radius:10px;
 }
 
-#bar {
-  height: 100%;
-  width: 0%;
-  background: blue;
-  transition: 0.5s;
+#bar{
+height:100%;
+width:0%;
+background:blue;
+transition:0.5s;
 }
 
-.card {
-  width: 300px;
-  margin: 100px auto;
-  background: #111;
-  padding: 20px;
-  border-radius: 15px;
-  animation: slide 1s;
+.popup{
+position:fixed;
+top:50%;
+left:50%;
+transform:scale(0) translate(-50%,-50%);
+background:#111;
+padding:20px;
+border:2px solid blue;
+border-radius:15px;
+transition:0.5s;
 }
 
-@keyframes slide {
-  from {opacity:0; transform: translateY(50px);}
-  to {opacity:1; transform: translateY(0);}
+.popup.show{
+transform:scale(1) translate(-50%,-50%);
 }
 
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px;
-  background: black;
-  color: white;
-  border: 1px solid blue;
+.card{
+width:300px;
+margin:100px auto;
+background:#111;
+padding:20px;
+border-radius:15px;
+animation:slide 1s;
 }
 
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: scale(0) translate(-50%,-50%);
-  background: #111;
-  padding: 20px;
-  border: 2px solid blue;
-  border-radius: 15px;
-  transition: 0.5s;
+@keyframes slide{
+from{opacity:0;transform:translateY(50px);}
+to{opacity:1;transform:translateY(0);}
 }
 
-.popup.show {
-  transform: scale(1) translate(-50%,-50%);
+input{
+width:90%;
+padding:10px;
+margin:10px;
+background:black;
+color:white;
+border:1px solid blue;
 }
 
-#cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: blue;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(10px);
+#cursor{
+position:fixed;
+width:20px;
+height:20px;
+background:blue;
+border-radius:50%;
+filter:blur(10px);
+pointer-events:none;
 }
 
-.music-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
+.music-btn{
+position:fixed;
+top:10px;
+right:10px;
 }
