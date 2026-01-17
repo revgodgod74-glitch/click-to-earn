@@ -2,8 +2,8 @@ body {
   margin: 0;
   background: black;
   color: white;
-  text-align: center;
   font-family: Arial;
+  text-align: center;
 }
 
 #particles-js {
@@ -13,21 +13,51 @@ body {
   z-index: -1;
 }
 
+.title {
+  margin-top: 80px;
+  animation: fade 2s;
+}
+
+@keyframes fade {
+  from {opacity:0; transform: scale(0.8);}
+  to {opacity:1; transform: scale(1);}
+}
+
 button {
   padding: 15px 30px;
-  font-size: 18px;
+  margin: 10px;
   background: blue;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  animation: pulse 1.5s infinite;
+  font-size: 16px;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+.boost {
+  background: linear-gradient(45deg, blue, cyan);
+  box-shadow: 0 0 20px cyan;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {box-shadow:0 0 10px cyan;}
+  to {box-shadow:0 0 25px blue;}
+}
+
+.progress {
+  width: 70%;
+  height: 20px;
+  background: #222;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#bar {
+  height: 100%;
+  width: 0%;
+  background: blue;
+  transition: 0.5s;
 }
 
 .card {
@@ -35,8 +65,13 @@ button {
   margin: 100px auto;
   background: #111;
   padding: 20px;
-  border-radius: 10px;
-  animation: slideUp 1s;
+  border-radius: 15px;
+  animation: slide 1s;
+}
+
+@keyframes slide {
+  from {opacity:0; transform: translateY(50px);}
+  to {opacity:1; transform: translateY(0);}
 }
 
 input {
@@ -48,7 +83,34 @@ input {
   border: 1px solid blue;
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: scale(0) translate(-50%,-50%);
+  background: #111;
+  padding: 20px;
+  border: 2px solid blue;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.popup.show {
+  transform: scale(1) translate(-50%,-50%);
+}
+
+#cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: blue;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+.music-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
