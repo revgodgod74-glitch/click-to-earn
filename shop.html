@@ -5,13 +5,27 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Shop</h1>
+
+<h1>SHOP</h1>
 
 <div class="card">
-<h3>VIP Pass</h3>
-<p>100 Coins</p>
-<button onclick="alert('Purchased!')">Buy</button>
+<h3>VIP BOOST</h3>
+<p>50 Coins</p>
+<button onclick="buy()">Buy</button>
 </div>
+
+<script>
+function buy(){
+let coins=Number(localStorage.getItem("coins"))||0;
+if(coins>=50){
+coins-=50;
+localStorage.setItem("coins",coins);
+alert("Purchased!");
+}else{
+alert("Not enough coins");
+}
+}
+</script>
 
 </body>
 </html>
