@@ -6,25 +6,40 @@
 </head>
 <body>
 
-  <!-- Particles Background -->
-  <div id="particles-js"></div>
+<div id="particles-js"></div>
+<div id="cursor"></div>
 
-  <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="music/bg.mp3" type="audio/mpeg">
-  </audio>
+<button class="music-btn" onclick="playMusic()">▶ Music</button>
+<audio id="bgMusic" loop>
+  <source src="music/bg.mp3" type="audio/mpeg">
+</audio>
 
-  <h1 class="title">Click & Earn</h1>
+<h1 class="title">🔥 Click To Earn 🔥</h1>
 
-  <h2 id="coins">Coins: 0</h2>
-  <button onclick="earn()">Click to Earn</button>
+<h2 id="coins">Coins: 0</h2>
 
-  <br><br>
-  <a href="login.html">Login</a> |
-  <a href="register.html">Register</a> |
-  <a href="shop.html">Shop</a>
+<button onclick="earn()">💰 Click & Earn</button>
+<br><br>
+<button class="boost" onclick="boost()">⚡ Power Boost</button>
 
-  <script src="particles.js"></script>
-  <script src="js/main.js"></script>
+<p id="level">Level 1</p>
+<div class="progress">
+  <div id="bar"></div>
+</div>
+
+<br>
+<a href="login.html">Login</a> |
+<a href="register.html">Register</a> |
+<a href="shop.html">Shop</a>
+
+<!-- Daily Bonus -->
+<div id="bonusPopup" class="popup">
+  <h2>🎁 Daily Bonus</h2>
+  <p>+10 Coins</p>
+  <button onclick="claimBonus()">Claim</button>
+</div>
+
+<script src="particles.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
